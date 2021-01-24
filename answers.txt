@@ -1,0 +1,23 @@
+When building a RPA application, it’s very usual to find that your application’s IP is blocked. How would you solve this kind of problem?
+
+ - In this case you can use the command change proxy, because the motive that the IP blocked is because the many time that the robot get in the same proxy during the loop.
+
+What is the difference between these status codes: HTTP 200, 300 e 500?
+
+ - It’s means:
+1.	Successful responses (200)
+2.	Redirects (300)
+3.	Server errors (500)
+
+What is XML and JSON?
+
+ -XML is a meta-language/markup language, I mean the XML knows how to separate markup from data 
+-JSON is a lightweight data-interchange, the JSON parser, therefore, knows exactly what every JSON document means
+
+What is Charset?
+-The was created to corrects accentuation problems, in HTML we using the UTF-8 to be able insert accentuation and special characters in you code
+
+
+Describe shortly what is a RESTful API?
+-n API is an application programming interface. It is a set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.
+

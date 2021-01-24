@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Requester Field</h1>
+
+    <div class="container">
+        <div class="A1">
+            <div class="ip1">
+                <input type="text" name="" value = "IP" id="">
+            </div>
+            <div class="city">
+                <input type="text" name="" value = "City" id="">
+            </div>
+        </div>
+        <div class="A2">
+            <div class="result">
+                <label for="">Result</label>
+            </div>
+            <div class="result2">
+                <label for="">Result</label>
+            </div>
+        </div>
+        
+
+    </div>
+    
+
+
+    
+
+    <script>
+        $(document).ready(function() {
+
+        $('.btn-enviar').click(function (e) { 
+            e.preventDefault();
+            $('.field').change(function(){
+                var displayvalue = $('.field option:selected').text();
+                console.log(        )
+
+            });
+        });
+
+
+             function loadData() { 
+                 $.get('http://localhost:3000/ipinfo', function(response) {
+
+                    $('input').html(' ');
+
+                    $.each(response, function(index, item) {
+                                let ip = `                        
+                                        <input type="text" name="" value="${item.ip}" id="">
+                                     `;
+
+                                     $('.result').append(ip)
+                                });
+
+                $.each(response, function(index, item) {
+                                let city = `                        
+                                        <input type="text" name="" value="${item.city}" id="">
+                                     `;
+
+                                     $('.result2').append(city)
+                                });
+
+                 });
+                    
+            }
+
+            loadData();
+
+                
+                     
+        });       
+        
+    </script>
+</body>
+
+</html>
+
